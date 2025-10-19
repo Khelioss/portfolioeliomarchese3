@@ -327,4 +327,21 @@ footer span{
         width: 100%; /* immagini portfolio occupano tutta la colonna */
         max-width: 200px; /* limite massimo per non sformare */
     }
+
+}
+@media (max-width: 768px) {
+    .hero {
+        padding: 1rem; /* riduce il padding laterale */
+    }
+
+    .nav-links {
+        gap: 0.5rem;        /* riduce lo spazio tra i link */
+        flex-wrap: wrap;    /* i link che non stanno su una riga passano alla riga successiva */
+        justify-content: center; /* centra i link */
+    }
+
+    .nav-links li a {
+        font-size: 0.9rem;  /* riduce leggermente il testo */
+        padding: 0.3rem 0.5rem;
+    }
 }
