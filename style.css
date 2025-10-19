@@ -390,5 +390,40 @@ body {
         display: none;
     }
 }
+@media (max-width: 768px) {
+    .hero {
+        flex-wrap: nowrap;        /* impedisce che logo e link vadano su righe diverse */
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        justify-content: space-between;
+        align-items: center;      /* centra verticalmente logo e link */
+    }
+
+    .nav-links {
+        gap: 0.5rem;              /* meno spazio tra link */
+        max-width: calc(100% - 100px); /* lascia spazio per il logo (aggiusta 100px se serve) */
+        overflow-x: auto;          /* scroll se i link non ci stanno */
+        flex-wrap: nowrap;         
+        display: flex;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .nav-links li {
+        flex: 0 0 auto;            /* ogni link prende solo lo spazio necessario */
+        text-align: center;
+    }
+
+    .nav-links li a {
+        font-size: 0.85rem;        
+        padding: 0.2rem 0.5rem;
+        white-space: nowrap;
+        display: block;
+    }
+
+    .nav-links::-webkit-scrollbar {
+        display: none;
+    }
+}
+
 
 
