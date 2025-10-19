@@ -329,19 +329,33 @@ footer span{
     }
 
 }
+body {
+    overflow-x: hidden;
+}
+
+/* Navbar responsive senza andare a capo */
 @media (max-width: 768px) {
     .hero {
-        padding: 1rem; /* riduce il padding laterale */
+        flex-wrap: wrap;           /* permette di adattare contenuto */
+        padding: 1rem;             /* padding ridotto */
+        justify-content: space-between;
     }
 
     .nav-links {
-        gap: 0.5rem;        /* riduce lo spazio tra i link */
-        flex-wrap: wrap;    /* i link che non stanno su una riga passano alla riga successiva */
-        justify-content: center; /* centra i link */
+        gap: 0.5rem;               /* riduce spazio tra link */
+        flex-wrap: nowrap;          /* forzato per rimanere in orizzontale */
+        overflow-x: auto;           /* permette scroll orizzontale se necessario */
     }
 
     .nav-links li a {
-        font-size: 0.9rem;  /* riduce leggermente il testo */
+        font-size: 0.9rem;         /* testo più piccolo */
         padding: 0.3rem 0.5rem;
+        white-space: nowrap;       /* impedisce al link di andare a capo */
+    }
+
+    /* opzionale: nasconde scroll bar ma mantiene scroll */
+    .nav-links::-webkit-scrollbar {
+        display: none;
     }
 }
+
