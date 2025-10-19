@@ -1,0 +1,330 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    scroll-behavior: smooth;
+    font-family: "Inter", sans-serif;
+    background: linear-gradient(to bottom, blue, rgb(18, 113, 202), rgb(18, 140, 188));
+}
+.hero .logo{
+       color: yellow;
+       text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    backdrop-filter: blur(8px);
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem; /* Spazio tra i link */
+    list-style: none;
+    color: white;
+}
+nav a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    animation: all 0.3 ease;
+}
+nav a:hover{
+    color: yellow;
+}
+.header{
+    display: flex;
+    justify-content: space-between; /* Spazio tra immagine e testo */
+    align-items: center;            /* Centra verticalmente */
+    padding: 6rem 2rem;
+    gap: 2rem;
+}
+.header-text {
+    display: flex;
+    flex-direction: column;  /* Gli elementi vanno uno sotto l'altro */
+    align-items: flex-start; /* Allinea a sinistra della colonna */
+    gap: 1rem;               /* Spazio tra h1, h2 e bottone */
+    width: 500px;
+}
+.header a{
+    box-shadow: 0px 5px 10px rgb(184, 190, 15);
+    text-decoration: none;
+    color: black;
+    background-color: yellow;
+    border-radius: 15px;
+    padding: 0.3rem;
+    color: white;
+    text-shadow: 0px 1px 3px black;
+    font-weight: 700;
+}
+.header a:hover{
+    box-shadow:0px 5px 20px yellow;
+}
+
+.header h1{
+    color: white;
+    text-decoration: underline;
+}
+.header h1 span{
+    color: yellow;
+    font-weight: 1000;
+    text-decoration: none;
+    display: inline-block;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+.header h2{
+    color: white;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+.header h2 span{
+     color: yellow;
+    font-weight: 1000;
+    text-decoration: none;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+.about h2{
+     color: yellow;
+     text-align: center;
+     text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+.about p{
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+.about span{
+     color: yellow;
+    font-weight: 1000;
+    text-decoration: none;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+.portfolio h2{
+     color: yellow;
+     text-align: center;
+     text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+     padding: 2rem;
+}
+.projects{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    padding: 2rem;
+}
+.project-card{
+    text-align: center;
+    color: white;
+    transition: transform 0.3 ease;
+}
+.project-card img:hover{
+    transform: scale(1.12);
+    box-shadow: 0px 5px 15px black;
+}
+.project-card h3{
+    color: yellow;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+.contact form {
+    display: flex;
+    flex-direction: column; /* elementi in colonna */
+    gap: 1rem;              /* spazio tra input, textarea e bottone */
+    max-width: 500px;       /* larghezza massima del form */
+    margin: 0 auto;          /* centra il form */
+}
+.contact{
+backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    padding: 2rem;
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+}
+input{
+    background: transparent;
+    border: 1px solid rgb(255, 251, 251);
+    border-radius: 15px; 
+    padding: 0.5rem;
+    backdrop-filter: blur(8px);
+
+}
+textarea{
+    background: transparent;
+    border: 1px solid rgb(255, 251, 251);
+    border-radius: 15px; 
+    padding: 0.5rem;
+    backdrop-filter: blur(8px);
+    padding: 1rem;
+
+}
+::placeholder{
+    color: white;
+    text-shadow: 0px 1px 3px black;
+    font-style: italic;
+    font-family: 'Inter', serif;
+}
+.btn{
+      background: yellow;
+    border: 1px solid rgb(255, 251, 251);
+    border-radius: 15px; 
+    padding: 0.5rem;
+    backdrop-filter: blur(8px);
+    box-shadow: 0px 5px 10px yellow;
+    color: white;
+    text-shadow: 0px 1px 3px black;
+}
+.btn:hover{
+     box-shadow: 0px 5px 20px yellow;
+}
+.services{
+    text-align: center;
+    padding: 2rem;
+}
+.services ul{
+    list-style: none;
+}
+.services h2{
+       color: yellow;
+      text-shadow: 0px 1px 3px black;
+      text-decoration: underline;
+      padding: 1rem;
+}
+.services strong{
+      color: yellow;
+      text-shadow: 0px 1px 3px black;
+}
+.services li{
+    color: white;
+    text-shadow: 0px 1px 3px black;
+}
+.about img{
+     transition: transform 0.3 ease, box-shadow 0.3 ease;
+}
+.about img:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 5px 15px black;
+}
+footer{
+    text-align: center;
+    padding: 1rem;
+    background-color: blue;
+    color: white;
+    font-style: italic;
+}
+footer span{
+     color: yellow;
+      text-shadow: 0px 1px 3px black;
+}
+@media (max-width: 1024px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 6rem 1rem;
+        gap: 1rem;
+    }
+
+    .header-text {
+        width: 100%;
+        align-items: center;
+    }
+
+    .header img {
+        width: 250px; /* adatta immagine */
+    }
+
+    .projects {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1rem;
+        align-items: center;
+    }
+
+    .project-card img {
+        width: 80%; /* scala le immagini dei progetti */
+    }
+
+    .contact {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .header a {
+        padding: 0.5rem 1rem;
+    }
+
+    .about img {
+        width: 80%;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+}
+
+/* Schermi molto piccoli */
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .header h2 {
+        font-size: 1.2rem;
+    }
+
+    .projects {
+        gap: 1.5rem;
+    }
+
+    .project-card h3 {
+        font-size: 1rem;
+    }
+
+    .header img {
+        width: 200px;
+    }
+
+    .about img {
+        width: 100%;
+    }
+
+    .services li {
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 1024px) {
+    .header img {
+        width: 200px; /* immagine header più piccola */
+    }
+    .about img {
+        width: 70%; /* immagine chi sono più piccola */
+    }
+    .project-card img {
+        width: 150px; /* immagini portfolio più piccole */
+    }
+}
+
+@media (max-width: 600px) {
+    .header img {
+        width: 150px; /* header mobile piccolo */
+    }
+    .about img {
+        width: 250px; /* occupa tutta la larghezza ma resta proporzionata */
+
+    }
+    .project-card img {
+        width: 100%; /* immagini portfolio occupano tutta la colonna */
+        max-width: 200px; /* limite massimo per non sformare */
+    }
+}
