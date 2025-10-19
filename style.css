@@ -358,4 +358,37 @@ body {
         display: none;
     }
 }
+@media (max-width: 768px) {
+    .hero {
+        padding-left: 0.5rem;      /* riduce padding laterale */
+        padding-right: 0.5rem;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        gap: 0.5rem;               /* meno spazio tra link */
+        flex-wrap: nowrap;          /* rimane in orizzontale */
+        max-width: 100%;            /* non supera la larghezza della navbar */
+        overflow-x: auto;           /* scroll orizzontale se necessario */
+        -webkit-overflow-scrolling: touch; /* smooth scroll su mobile */
+    }
+
+    .nav-links li {
+        flex: 1;                    /* link si ridimensionano proporzionalmente */
+        text-align: center;         /* centra il testo dei link */
+    }
+
+    .nav-links li a {
+        font-size: 0.85rem;         /* testo leggermente più piccolo */
+        padding: 0.2rem 0.5rem;
+        white-space: nowrap;        /* impedisce al link di andare a capo */
+        display: block;             /* necessario per flex:1 su li */
+    }
+
+    /* Nasconde la scroll bar orizzontale ma mantiene lo scroll */
+    .nav-links::-webkit-scrollbar {
+        display: none;
+    }
+}
+
 
